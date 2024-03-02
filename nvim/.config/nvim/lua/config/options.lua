@@ -9,3 +9,4 @@ vim.opt.splitbelow = true
 vim.opt.virtualedit = "block"
 vim.opt.ignorecase = true
 vim.opt.termguicolors = true
+vim.opt.mouse = ""
