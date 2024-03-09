@@ -1,21 +1,9 @@
-local function map(mode, lhs, rhs, opts)
-	if opts.noremap == nil then
-		opts.noremap = true
-	end
-	if opts.silent == nil then
-		opts.silent = true
-	end
-
-	vim.keymap.set(mode, lhs, rhs, opts)
-end
-
 -- leader
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
 -- window movements
-map("n", "<C-k>", "<C-w>k", {})
-map("n", "<C-j>", "<C-w>j", {})
-map("n", "<C-h>", "<C-w>h", {})
-map("n", "<C-l>", "<C-w>l", {})
-map("n", "<C-c>", "<C-w>c", {})
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
