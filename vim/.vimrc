@@ -1,6 +1,15 @@
 "Enter the current millenium
 set nocompatible
 
+"Disable backup
+set nobackup
+
+"Set encoding
+set encoding=utf-8
+
+"Disable line wrap
+set nowrap
+
 "Enable filetype support provides filetype-specific indenting, syntax highlighting, omni-completion and other. 
 filetype plugin indent on
 syntax on
@@ -34,4 +43,9 @@ set wildmenu
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 
+"Disable arrows in normal and visual
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
