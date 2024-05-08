@@ -43,12 +43,6 @@ set wildmenu
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 
-"Disable arrows in normal and visual
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-
 "Disable swap files
 set noswapfile 
 
