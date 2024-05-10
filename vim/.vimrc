@@ -32,7 +32,7 @@ set backspace=indent,eol,start
 "Posibility to have more than one unsaved buffer.
 set hidden
 
-"Incremental search.
+"Incremental and highlight search.
 set incsearch
 
 "Shows the current line number at the bottom-right of the screen.
@@ -57,8 +57,12 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+"<CR> remap to confirm autocompletion
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
 call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
