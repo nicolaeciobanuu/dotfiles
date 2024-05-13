@@ -34,6 +34,7 @@ set hidden
 
 "Incremental and highlight search.
 set incsearch
+set hlsearch
 
 "Shows the current line number at the bottom-right of the screen.
 set ruler
