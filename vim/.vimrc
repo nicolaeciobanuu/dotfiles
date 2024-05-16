@@ -16,6 +16,7 @@ syntax on
 
 "Display line number.
 set number
+set relativenumber
 
 "Ignorecase for filesearch.
 set ignorecase
@@ -40,12 +41,11 @@ set hlsearch
 set ruler
 
 "Command-line completion.
+set wildmode=longest,list,full
 set wildmenu
+
 let g:netrw_banner=0
 let g:netrw_liststyle=3
-
-"Disable swap files
-set noswapfile 
 
 "Disable arrows in normal and visual
 noremap <Up> <Nop>
