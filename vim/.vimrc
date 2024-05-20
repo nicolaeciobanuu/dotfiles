@@ -14,6 +14,11 @@ set nowrap
 filetype plugin indent on
 syntax on
 
+"Tab indent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 "Display line number.
 set number
 set relativenumber
@@ -44,11 +49,22 @@ set ruler
 set wildmode=longest,list,full
 set wildmenu
 
+"Netrw.vim config
 let g:netrw_banner=0
 let g:netrw_liststyle=3
+let g:netrw_winsize=30
+
+"Disable swap files
+set noswapfile 
 
 "Disable arrows in normal and visual
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+"Remove results from hlsearch
+nnoremap <C-L> :noh<cr><C-L>
+
+"Open netrw.vim in the open's file directory
+nnoremap <C-D> :Le<CR>
