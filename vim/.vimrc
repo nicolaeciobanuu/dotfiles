@@ -71,7 +71,6 @@ nnoremap <C-D> :Le<CR>
 
 "<CR> remap to confirm autocompletion
 inoremap <expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 "fzf mappings
 nnoremap <silent> <C-f> :Files<CR>
