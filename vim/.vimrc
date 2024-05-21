@@ -1,6 +1,4 @@
-"Enter the current millenium
-set nocompatible
-
+set termguicolors
 "Disable backup
 set nobackup
 
@@ -57,6 +55,8 @@ let g:netrw_winsize=30
 "Disable swap files
 set noswapfile 
 
+"------------------------------------------------------------
+
 "Disable arrows in normal and visual
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -68,3 +68,29 @@ nnoremap <C-L> :noh<cr><C-L>
 
 "Open netrw.vim in the open's file directory
 nnoremap <C-D> :Le<CR>
+
+"<CR> remap to confirm autocompletion
+inoremap <expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+"fzf mappings
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <C-g> :RG<CR>
+
+"--------------------------------------------------------------
+
+"Autoload vim-plug
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin()
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+call plug#end()
+
+colorscheme catppuccin_mocha
