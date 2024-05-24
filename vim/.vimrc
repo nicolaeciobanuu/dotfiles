@@ -1,4 +1,9 @@
+"Enter the current era
+set nocompatible
+
+"Use 24-bit colors
 set termguicolors
+
 "Disable backup
 set nobackup
 
@@ -13,9 +18,8 @@ filetype plugin indent on
 syntax on
 
 "Tab indent
-set tabstop=4
 set shiftwidth=4
-set expandtab
+set softtabstop=4
 
 "Display line number.
 set number
@@ -32,16 +36,10 @@ set autoindent
 
 "Intuitive backspace behavior.
 set backspace=indent,eol,start
-
-"Posibility to have more than one unsaved buffer.
-set hidden
-
+    
 "Incremental and highlight search.
 set incsearch
 set hlsearch
-
-"Shows the current line number at the bottom-right of the screen.
-set ruler
 
 "Command-line completion.
 set wildmode=longest,list,full
@@ -54,6 +52,12 @@ let g:netrw_winsize=30
 
 "Disable swap files
 set noswapfile 
+
+"Set colorscheme
+colorscheme slate
+
+"Display line number bellow
+set ruler
 
 "------------------------------------------------------------
 
@@ -68,28 +72,3 @@ nnoremap <C-L> :noh<cr><C-L>
 
 "Open netrw.vim in the open's file directory
 nnoremap <C-D> :Le<CR>
-
-"<CR> remap to confirm autocompletion
-inoremap <expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-
-"fzf mappings
-nnoremap <silent> <C-f> :Files<CR>
-nnoremap <silent> <C-g> :RG<CR>
-
-"--------------------------------------------------------------
-
-"Autoload vim-plug
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin()
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }
-call plug#end()
-
-colorscheme catppuccin_mocha
