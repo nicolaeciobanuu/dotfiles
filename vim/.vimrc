@@ -1,29 +1,24 @@
-set nocompatible
-set termguicolors
-set nobackup
-set encoding=utf-8
 set nowrap
+set ruler
+set number 
+set relativenumber
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set number
-set relativenumber
-set ignorecase
-set autoindent
-set backspace=indent,eol,start
 set incsearch
 set hlsearch
-set wildmode=longest,list,full
-set wildmenu
-set ruler
+set autoindent
+set ignorecase
+set wildmenu 
 set noswapfile 
-runtime macros/matchit.vim
-colorscheme slate
-filetype plugin indent on
+set backspace=indent,eol,start
+set path+=**
 syntax on
+filetype plugin indent on
+colorscheme slate
+let g:loaded_matchparen=1
 let g:netrw_banner=0
-let g:netrw_liststyle=3
-let g:netrw_winsize=20
+let g:netrw_winsize=25
+nnoremap <C-H> :nohlsearch<CR>
+nnoremap <C-E> :Lexplore<CR>
 
-nnoremap <C-l> :nohlsearch<CR>
-nnoremap <C-e> :Lexplore<CR>
