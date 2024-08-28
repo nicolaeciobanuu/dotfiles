@@ -16,14 +16,10 @@ set noswapfile
 set backspace=indent,eol,start
 set path+=**
 set hidden
-autocmd FileType * setlocal omnifunc=syntaxcomplete#Complete
-autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+set omnifunc=syntaxcomplete#Complete
 syntax on
 filetype plugin indent on
-colorscheme torte
+colorscheme habamax
 let g:loaded_matchparen=1
 let g:netrw_liststyle=3
 let g:netrw_banner=0
