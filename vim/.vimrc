@@ -6,6 +6,7 @@ set number
 set relativenumber
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
 set expandtab
 set incsearch
 set hlsearch
@@ -17,6 +18,7 @@ set backspace=indent,eol,start
 set path+=**
 set hidden
 set omnifunc=syntaxcomplete#Complete
+set pumheight=10 
 syntax on
 filetype plugin indent on
 colorscheme habamax
