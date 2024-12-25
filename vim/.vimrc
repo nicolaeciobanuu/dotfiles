@@ -10,7 +10,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set incsearch
-set nohlsearch
+set hlsearch
 set autoindent
 set ignorecase
 set smartcase
@@ -23,7 +23,13 @@ set path+=**
 set hidden
 set omnifunc=syntaxcomplete#Complete
 set pumheight=10 
-set clipboard=unnamed
 syntax on
 filetype plugin indent on
 colorscheme torte
+let g:loaded_matchparen=1
+let g:netrw_liststyle=3
+let g:netrw_banner=0
+let g:netrw_winsize=20
+nnoremap <C-h> :nohlsearch<CR>
+nnoremap <C-e> :Lexplore!<CR>
+nnoremap <BS> ciw
