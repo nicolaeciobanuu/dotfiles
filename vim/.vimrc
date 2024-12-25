@@ -10,7 +10,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set incsearch
-set hlsearch
+set nohlsearch
 set autoindent
 set ignorecase
 set smartcase
