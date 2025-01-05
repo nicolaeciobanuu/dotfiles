@@ -15,6 +15,7 @@ set autoindent
 set ignorecase
 set smartcase
 set wildmenu 
+set wildignorecase
 set noswapfile 
 set nowritebackup
 set nobackup
@@ -33,7 +34,3 @@ let g:netrw_winsize=20
 nnoremap <C-h> :nohlsearch<CR>
 nnoremap <C-e> :Lexplore!<CR>
 nnoremap <BS> ciw
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> ]b :bnext<CR>
-nnoremap <silent> [B :bfirst<CR>
-nnoremap <silent> ]B :blast<CR>
