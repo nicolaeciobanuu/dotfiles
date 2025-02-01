@@ -10,7 +10,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set incsearch
-set nohlsearch
+set hlsearch
 set autoindent
 set ignorecase
 set smartcase
@@ -33,8 +33,3 @@ let g:netrw_banner=0
 let g:netrw_winsize=20
 nnoremap <C-h> :nohlsearch<CR>
 nnoremap <C-e> :Lexplore!<CR>
-nnoremap <BS> ciw
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> ]b :bnext<CR>
-nnoremap <silent> [B :bfirst<CR>
-nnoremap <silent> ]B :blast<CR>
